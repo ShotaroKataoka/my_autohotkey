@@ -65,12 +65,11 @@ sc079 & 5::
         Run, "C:\Users\e5206\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Visual Studio Code - Insiders\Visual Studio Code - Insiders.lnk"
     return
 sc079 & 6::
+    IfWinExist, ahk_class PPTFrameClass ahk_exe POWERPNT.EXE
+        WinActivateBottom, ahk_class PPTFrameClass ahk_exe POWERPNT.EXE
+    Else
+        Run, "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\PowerPoint.lnk"
     return
-;     IfWinExist, ahk_class HwndWrapper[TogglTrack;;adb73364-7bdd-443b-89e1-32615eb0ba76] ahk_exe TogglTrack.exe
-;         WinActivateBottom, ahk_class HwndWrapper[TogglTrack;;adb73364-7bdd-443b-89e1-32615eb0ba76] ahk_exe TogglTrack.exe
-;     Else
-;         Run, "C:\Users\e5206\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Toggl OÜ\Toggl Track.lnk"
-;     return
 sc079 & 7::
     IfWinExist, ChatGPT ahk_class Chrome_WidgetWin_1 ahk_exe msedge.exe
         WinActivateBottom, ChatGPT ahk_class Chrome_WidgetWin_1 ahk_exe msedge.exe
@@ -95,24 +94,10 @@ sc079 & sc029::
 return
 ; Windows Shortcut Key
 sc079 & d::Send, {Del}
-sc079 & r::Send, +{F10}
 sc079 & a::Send, ^{a}
-sc079 & s::
-  Send, !{space}
-  ensetIME("off")
-  send, {?}
-  return
-sc079 & =::
-  Send, !{space}
-  ensetIME("off")
-  send, {=}
-  return
 ; Move Virtual Desktop
 sc079 & u::Send, #^{Left}
 sc079 & i::Send, #^{F4}
 sc079 & o::Send, #^{d}
 sc079 & p::Send, #^{Right}
-; move window between Virtual Desktop
-sc079 & sc01A::Send, ^+!{Left}
-sc079 & sc01B::Send, ^+!{Right}
-sc079 & sc028::Send, ^+!{p}
+
