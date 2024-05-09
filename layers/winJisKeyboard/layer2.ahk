@@ -35,8 +35,8 @@ sc079 & q::Send, !+{Esc}
 sc079 & e::Send, !{Tab}
 ;; Activate specific apps
 sc079 & 1::
-    IfWinExist, ahk_class Chrome_WidgetWin_1 ahk_exe msedge.exe, , ChatGPT
-        WinActivateBottom, ahk_class Chrome_WidgetWin_1 ahk_exe msedge.exe, , ChatGPT
+    IfWinExist, ahk_class Chrome_WidgetWin_1 ahk_exe msedge.exe, , LibreChat
+        WinActivateBottom, ahk_class Chrome_WidgetWin_1 ahk_exe msedge.exe, , LibreChat
     Else
         Run,"C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Microsoft Edge.lnk"
     return
@@ -71,8 +71,8 @@ sc079 & 6::
         Run, "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\PowerPoint.lnk"
     return
 sc079 & 7::
-    IfWinExist, ChatGPT ahk_class Chrome_WidgetWin_1 ahk_exe msedge.exe
-        WinActivateBottom, ChatGPT ahk_class Chrome_WidgetWin_1 ahk_exe msedge.exe
+    IfWinExist, LibreChat ahk_class Chrome_WidgetWin_1 ahk_exe msedge.exe
+        WinActivateBottom, LibreChat ahk_class Chrome_WidgetWin_1 ahk_exe msedge.exe
     return
 sc079 & 8::
     IfWinExist, ahk_class Chrome_WidgetWin_1 ahk_exe Notion.exe

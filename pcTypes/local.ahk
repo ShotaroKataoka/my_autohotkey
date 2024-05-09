@@ -3,7 +3,12 @@
 #Include %A_LineFile%\..\..\layers\winJisKeyboard\layer3.ahk
 #Include %A_LineFile%\..\..\layers\winJisKeyboard\layer4.ahk
 
+; hanzen
+changeHanzen() {
+    Send {vkF3sc029}
+}
+
 ; CapsLockを半角全角にする
-CapsLock::Send {vkF3sc029}
+CapsLock::changeHanzen()
 ; 半角全角を`にする
 sc073::`
