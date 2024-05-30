@@ -38,3 +38,6 @@ sc07B & 7::Send, {F7}
 sc07B & 8::Send, {F8}
 sc07B & 9::Send, {F9}
 sc07B & 0::Send, {F10}
+
+; Notion 無変換+/で検索
+sc07B & sc035::Send, !+^{/}
